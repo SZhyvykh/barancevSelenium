@@ -5,12 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import pages.LoginPage;
+import pages.MainPage;
 
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
     private String url;
+    protected MainPage mainPage;
     protected LoginPage loginPage;
 
     @BeforeClass
@@ -21,8 +23,12 @@ public class BaseTest {
         driver.manage().window().maximize();
         driver.get(url);
         driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
-       // System.out.println(driver.getTitle());
         loginPage = new LoginPage(driver);
+        loginPage.enterUserName("admin");
+        loginPage.enterPassword("secret");
+        loginPage.clickLoginButton();
+       // System.out.println(driver.getTitle());
+        mainPage = new MainPage(driver);
 
 
     }

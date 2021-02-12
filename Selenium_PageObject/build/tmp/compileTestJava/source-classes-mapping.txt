@@ -1,4 +1,8 @@
-base/BaseTest.java
- base.BaseTest
 login/LoginTest.java
  login.LoginTest
+groups/GroupDeletionTest.java
+ groups.GroupDeletionTest
+base/BaseTest.java
+ base.BaseTest
+groups/GroupCreationTest.java
+ groups.GroupCreationTest

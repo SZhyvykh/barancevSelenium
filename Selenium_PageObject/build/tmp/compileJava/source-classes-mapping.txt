@@ -1,4 +1,10 @@
 pages/MainPage.java
  pages.MainPage
+pages/GroupsPage.java
+ pages.GroupsPage
+utilities/ApplicationHelper.java
+ utilities.ApplicationHelper
 pages/LoginPage.java
  pages.LoginPage
+pages/GroupsCreationPage.java
+ pages.GroupsCreationPage
