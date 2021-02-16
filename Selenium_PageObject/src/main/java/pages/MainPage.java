@@ -2,14 +2,11 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import utilities.ApplicationHelper;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 public class MainPage extends ApplicationHelper {
     private By groupsLink = By.linkText("groups");
+    private By addNewLink = By.linkText("add new");
 
     public MainPage(WebDriver driver)
     {
@@ -23,6 +20,11 @@ public class MainPage extends ApplicationHelper {
     public GroupsPage clickGroupsLink() {
         click(groupsLink);
         return new GroupsPage(driver);
+    }
+
+    public AddNewContactPage clickAddNewLink() {
+        click(addNewLink);
+        return new AddNewContactPage(driver);
     }
 
 

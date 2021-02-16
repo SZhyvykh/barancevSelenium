@@ -9,11 +9,17 @@ public class GroupsPage extends ApplicationHelper {
     private By selectGroup = By.name("selected[]");
     private By deleteGroupButton = By.name("delete");
     private By groupDeletedText = By.xpath("//div[@class='msgbox']");
-    private By groupPageLink = By.linkText("group page");
+    private By editGroupButton = By.name("edit");
 
 
     public GroupsPage(WebDriver driver) {
         super(driver);
+    }
+
+    public GroupsCreationPage clickEditGroupButton() {
+        click(editGroupButton);
+        return new GroupsCreationPage(driver);
+
     }
 
     public GroupsCreationPage clickNewGroupButton() {
@@ -34,6 +40,6 @@ public class GroupsPage extends ApplicationHelper {
     }
 
     public void clickReturnToGroupPage() {
-        click(groupPageLink);
+        clickReturnToGroupPageLink();
     }
 }

@@ -1,5 +1,7 @@
 pages/MainPage.java
  pages.MainPage
+pages/AddNewContactPage.java
+ pages.AddNewContactPage
 pages/GroupsPage.java
  pages.GroupsPage
 utilities/ApplicationHelper.java

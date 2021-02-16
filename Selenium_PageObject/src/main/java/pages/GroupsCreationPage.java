@@ -10,8 +10,11 @@ public class GroupsCreationPage extends ApplicationHelper {
     private By groupFooterField = By.name("group_footer");
     private By submitButton = By.name("submit");
     private By groupCreatedText = By.xpath("//div[@class='msgbox']");
-    private By groupPageLink = By.linkText("group page");
+    private By updateButton = By.name("update");
 
+    public void clickUpdateButton() {
+        click(updateButton);
+    }
 
 
     public GroupsCreationPage(WebDriver driver) {
@@ -19,18 +22,15 @@ public class GroupsCreationPage extends ApplicationHelper {
     }
 
     public void enterGroupName(String name) {
-        click(groupNameField);
-        driver.findElement(groupNameField).sendKeys(name);
+        enterText(groupNameField, name);
     }
 
     public void enterGroupHeader(String header) {
-        click(groupHeaderField);
-        driver.findElement(groupHeaderField).sendKeys(header);
+        enterText(groupHeaderField, header);
     }
 
     public void enterGroupFooter(String footer) {
-        click(groupFooterField);
-        driver.findElement(groupFooterField).sendKeys(footer);
+        enterText(groupFooterField, footer);
 
     }
 
@@ -43,7 +43,7 @@ public class GroupsCreationPage extends ApplicationHelper {
     }
 
     public void clickReturnToGroupPage() {
-        click(groupPageLink);
+        clickReturnToGroupPageLink();
     }
 
 }

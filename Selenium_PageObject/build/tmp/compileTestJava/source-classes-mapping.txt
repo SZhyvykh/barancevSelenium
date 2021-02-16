@@ -1,8 +1,12 @@
 login/LoginTest.java
  login.LoginTest
+contacts/ContactCreationTest.java
+ contacts.ContactCreationTest
 groups/GroupDeletionTest.java
  groups.GroupDeletionTest
 base/BaseTest.java
  base.BaseTest
 groups/GroupCreationTest.java
  groups.GroupCreationTest
+groups/GroupModificationTest.java
+ groups.GroupModificationTest

@@ -16,7 +16,7 @@ public class LoginTest extends BaseTest {
         loginPage.enterUserName("admin");
         loginPage.enterPassword("secret");
         var mainPage = loginPage.clickLoginButton();
-        assertEquals(mainPage.getTitle(), "Address book");
+        assertEquals(mainPage.getTitle(), "Address   book");
 
 
 
